@@ -1,0 +1,18 @@
+[package]
+name = "rust-archive-org-downloader"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.17", features = ["json", "stream", "blocking"] }
+serde = { version = "1.0.160", features = ["derive"] }
+quick-xml = { version = "0.28.2", features = ["serialize"] }
+zip = "0.6.4"
+rust_warc = "1.1.0"
+zstd = "0.12.3+zstd.1.5.2"
+regex = "1.8.1"
+rayon = "1.7.0"
+xz = "0.1.0"
+clap = { version = "4.2.7", features = ["derive"] }
