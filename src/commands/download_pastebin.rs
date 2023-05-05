@@ -1,9 +1,9 @@
-use clap::Parser;
-use rayon::prelude::*;
-use rust_archive_org_downloader::{
+use crate::{
     archive_org::{get_archive_files, get_archive_org_ids},
     warc_utils::get_warc_items,
 };
+use clap::Parser;
+use rayon::prelude::*;
 use std::{
     ops::{AddAssign, Rem},
     sync::{Arc, Mutex},
@@ -14,17 +14,16 @@ use std::{
 #[command(author = "Jesse Luoto")]
 #[command(version = "1.0")]
 #[command(
-    about = "Downloads pastebin crawl archives from archive.org (archiveteam_pastebin project) and checks for matches.
+    about = "Downloads pastebin crawl archives from archive.org (archiveteam_pastebin project) and checks for matches.",
+    long_about = "Downloads pastebin crawl archives from archive.org (archiveteam_pastebin project) and checks for matches.
 
-You can control the number of threads by setting the `RAYON_NUM_THREADS` environment variable.",
-    long_about = None
+You can control the number of threads by setting the `RAYON_NUM_THREADS` environment variable."
 )]
-struct Args {
+pub struct Args {
     #[arg(short, long)]
     regex: String,
 }
-fn main() {
-    let args = Args::parse();
+pub fn download_pastebin(args: Args) {
     let regex = regex::Regex::new(&args.regex).unwrap();
     let thread_safe_counter = Arc::new(Mutex::new(0));
 

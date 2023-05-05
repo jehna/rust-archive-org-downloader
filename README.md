@@ -15,15 +15,14 @@ You can find the tools from `src/bin/` directory. Start by running:
 cargo build --release
 ```
 
-This will build the binary files to `target/release/`. You can then run the
+This will build the binary to `target/release/rad`. You can then run the
 programs from there:
 
 ```shell
-./target/release/link_shortener_urls --help
-./target/release/download_pastebin --help
+./target/release/rad
 ```
 
-This will print out the help for the programs.
+This will print out the help for the program.
 
 ## Features
 
