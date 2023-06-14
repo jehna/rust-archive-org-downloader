@@ -35,6 +35,15 @@ run. The best parts:
   who like to live dangerously)
 * Hopefully gets me some edge finding bug bounties
 
+## Note about fair use of archive.org
+
+Please check out the blog post from archive.org titled ["Let us serve you, but
+don’t bring us down"][archive-org-blog-post].
+
+TL;DR don't use multiple VPS instances, it will DDOS archive.org.
+
+[archive-org-blog-post]: https://blog.archive.org/2023/05/29/let-us-serve-you-but-dont-bring-us-down/
+
 ## Contributing
 
 If you'd like to contribute, please fork the repository and use a feature
